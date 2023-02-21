@@ -80,6 +80,19 @@ $('.expander-lvl-2').click(function() {
     }
 });
 
+$('.close-all').click(function() {
+    $(this).parent().children().removeClass('main-section-expanded-p');
+    $(this).parent().children().children('.main-content-container').removeClass('main-section-expanded');
+    $(this).parent().children().children('.main-content-container').removeClass('main-section-expanded');
+    $(this).parent().children().children('.main-content-container')
+    .children('.main-content-container').removeClass('main-section-expanded');
+    // if(!$(this).parent().parent().hasClass('main-section-expanded')) {
+    //     $(this).parent().parent().addClass('main-section-expanded');
+    // } else {
+    //     $(this).parent().parent().removeClass('main-section-expanded');
+    // }
+});
+
 
 // setTimeout(function() {
 //     $('#arm-wrestling_wrapper').addClass('loaded');

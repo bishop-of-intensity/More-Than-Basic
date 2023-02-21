@@ -54,12 +54,44 @@ body {
   border-radius: 1rem;
 }
 
+.close-all {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.404);
+  color: rgb(231, 231, 231);
+  border-bottom-right-radius: 2rem;
+  z-index: 9999;
+}
 
+.close-all span {
+  transform: rotate(270deg);
+  font-size: 2.2rem;
+}
 
+.links-button {
+  display: flex;
+  background: #ffffff;
+  padding: 0.2rem 0.3rem 0.2rem .6rem;
+  width: 5.9rem;
+  border-radius: 2rem;
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+}
 
+.links-button div {
+}
 
-
-
+.links-button div ~ div {
+  margin-top: 0.2rem;
+  margin-left: 0.1rem;
+}
 
 
 #arm-wrestling_wrapper {
