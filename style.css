@@ -1,0 +1,788 @@
+/* BASE + RESETS */
+*,
+p, h1, h2, h3 {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+div, section ,p ,h1 ,h2, h3, span {
+  box-sizing: border-box;
+  max-height: 999999px;
+}
+html {
+  font-size: 1rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  min-height: 120vh;
+  overflow-y: scroll;
+  /* max-height: 100vh; */
+  /* overflow: hidden; */
+  /* user-select: none; */
+  animation-fill-mode: forwards;
+    background-position-y: -0.5rem;
+    background-color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html h1,
+html h2 {
+  font-weight: normal!important;
+}
+
+body {
+  /* max-height: 100vh; */
+  height: auto;
+  padding: 0 1rem 0 1rem;
+  /* overflow-y: scroll; */
+  background: url('img/bk-high.jpg');
+  background-size: contain;
+  min-height: 140vh;
+  /* max-width: 107rem;
+  margin: 0 auto; */
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#main {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 60rem;
+  padding: 1rem;
+  padding-bottom: 10rem;
+  border-radius: 1rem;
+}
+
+
+
+
+
+
+
+
+
+#arm-wrestling_wrapper {
+  font-size: 3.7rem;
+  height: 7.5rem;
+  font-family: 'Metal Mania', cursive;
+  transform: translateY(10rem);
+  transition: 700ms;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #7b00a0;
+  color: white;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  user-select: none;
+  background: linear-gradient(90deg, rgba(123,0,160,1) 25%, rgb(255 255 255 / 0%) 100%)
+}
+
+
+#arm-wrestling_wrapper.loaded {
+  transform: translateY(0rem);
+}
+
+.AW-link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.AW-Minimize {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 12rem;
+  cursor: pointer;
+}
+
+.AW-Maximize {
+  position: absolute;
+  left: 0;
+  width: 9rem;
+  display: none;
+}
+
+.AW-closed .AW-Maximize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AW-closed .AW-Minimize {
+  display: none;
+}
+
+.AW-closed .AW-arrows {
+  display: none;
+}
+
+#arm-wrestling_wrapper.AW-closed,
+#arm-wrestling_wrapper.AW-expanded {
+  transition: 0ms;
+}
+
+#arm-wrestling_wrapper.AW-closed {
+  width: 28.5rem;
+  height: 7rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  /* background: linear-gradient(90deg, rgb(0, 0, 0) 25%, rgb(255 255 255 / 0%) 100%); */
+
+  background: black;
+}
+
+
+.AW-text-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.AW-arrows {
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 0.2rem;
+  width: 19.5rem;
+}
+
+
+.AW-arrows div {
+  transform: translateX(5rem);
+  animation: ceva 1.5s infinite ;
+  animation-timing-function: linear;
+}
+
+@keyframes ceva {
+  0% {transform: translateX(-10.1rem)}
+  100% {transform: translateX(0rem)}
+}
+
+
+@media only screen and (orientation: landscape) { 
+  @keyframes ceva {
+    0% {transform: translateX(-12.5rem)}
+    100% {transform: translateX(0rem)}
+  }
+  .AW-arrows div {
+    animation: ceva 2.5s infinite ;
+    animation-timing-function: linear;
+  }
+  #arm-wrestling_wrapper {
+    font-size: 2rem;
+    height: 3.5rem;
+  }
+
+  .AW-arrows {
+    width: 13rem;
+  }
+  .AW-Minimize {
+    width: 8rem;
+  }
+  #arm-wrestling_wrapper.AW-closed {
+    width: 21rem;
+    height: 5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (min-width: 59em) and (orientation: landscape) {
+  .AW-arrows {
+    width: 12.5rem;
+  }
+}
+
+@media screen and (min-width: 89em) and (orientation: landscape) {
+  @keyframes ceva {
+    0% {transform: translateX(-12.85rem)}
+    100% {transform: translateX(0rem)}
+  }
+  .AW-arrows {
+    width: 16rem;
+  }
+  .AW-Minimize {
+    width: 12rem;
+  }
+  
+  #arm-wrestling_wrapper {
+    font-size: 3rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (max-width: 90em) and (orientation: landscape) {
+  #arm-wrestling_wrapper.AW-closed {
+    width: 14.3rem;
+    height: 3.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.parent {
+  max-height: 6rem;
+  overflow: hidden;
+  margin: 0 0 3rem 0;
+}
+
+.expander-p-container {
+  height: 6rem;
+  /* background-color: rgb(255, 168, 60); */
+  background-color: rgb(255, 168, 60);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.category-A .expander-p-container {
+  background-color: rgb(68, 70, 211);
+}
+
+.category-B .expander-p-container {
+  background-color: rgb(60, 177, 255);
+}
+
+.category-C .expander-p-container {
+  background-color: rgb(255, 154, 60);
+}
+
+.expander-p-arrow {
+  position: absolute;
+  font-size: 3.5rem;
+  top: 1rem;
+  right: 3rem;
+  transform: rotate(90deg);
+  user-select: none;
+}
+.expander-p-title {
+  
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  user-select: none;
+  font-family: 'Black Ops One', cursive;
+}
+.main-section-expanded-p {
+  max-height: none!important;
+}
+.main-section-expanded-p .expander-p-arrow {
+  transform: rotate(270deg);
+  color: rgb(255, 168, 60);
+  top: 0.7rem;
+  right: 2.7rem;
+}
+
+.category-A.main-section-expanded-p .expander-p-arrow {
+  /* color: rgb(50, 53, 209); */
+  color: rgb(255, 255, 255);
+}
+.category-B.main-section-expanded-p .expander-p-arrow {
+  /* color: rgb(21, 147, 231); */
+  color: rgb(255, 255, 255);
+}
+.category-C.main-section-expanded-p .expander-p-arrow {
+  /* color: rgb(255, 159, 40); */
+  color: rgb(255, 255, 255);
+}
+
+.main-section-expanded-p .expander-p-title {
+  color: rgb(255, 168, 60);
+  padding-top: 1.7rem;
+  padding-left: 1.7rem;
+
+} 
+
+.category-A.main-section-expanded-p .expander-p-title {
+  /* color: rgb(50, 53, 209); */
+  color: rgb(0, 0, 0);
+}
+.category-B.main-section-expanded-p .expander-p-title {
+  /* color: rgb(21, 147, 231); */
+  color: rgb(0, 0, 0);
+}
+.category-C.main-section-expanded-p .expander-p-title {
+  /* color: rgb(255, 159, 40); */
+  color: rgb(0, 0, 0);
+}
+
+.main-section-expanded-p .expander-p-container {
+  /* background-color: black; */
+  border: 0.3rem solid rgb(255, 168, 60);
+}
+
+.category-A.main-section-expanded-p .expander-p-container {
+  border-color: rgb(50, 53, 209);
+}
+.category-B.main-section-expanded-p .expander-p-container {
+  border-color: rgb(21, 147, 231);
+}
+.category-C.main-section-expanded-p .expander-p-container {
+  border-color: rgb(255, 159, 40);
+}
+
+
+
+.main-content-container {
+  width: 100%;
+  max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  /* border: 0.155rem white solid; */
+  background-color: rgb(255, 168, 60);
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  padding-bottom: .5rem;
+  /* box-shadow: 0.5rem 0.5rem 0.3rem 0rem rgb(0, 0, 0); */
+  box-shadow: 1rem 1rem 0.2rem 0rem rgb(0, 0, 0);
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.category-A .main-content-container {
+  background-color: rgb(50, 53, 209);
+}
+.category-B .main-content-container {
+  background-color: rgb(21, 147, 231);
+}
+.category-C .main-content-container {
+  background-color: rgb(255, 159, 40);
+}
+/* BASE + RESETS */
+
+
+/* POST LOAD IMGs */
+#root.wave-1 {
+  /* background-image: url('images/Fortress-L.jpg'); */
+}
+/* POST LOAD IMGs */
+
+
+
+
+.main-content-container h1 {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  user-select: none;
+  font-family: 'Black Ops One', cursive;
+  font-size: 1.5rem;
+}
+.main-section-collapsed {
+  max-height: 6rem;
+  position: relative;
+}
+.expander,
+.expander-lvl-2 {
+  position: absolute;
+  font-size: 3.5rem;
+  top: 1rem;
+  right: 3rem;
+  transform: rotate(90deg);
+  cursor: pointer;
+  user-select: none;
+}
+.main-section-expanded {
+  max-height: none!important;
+}
+.main-section-expanded .expander,
+.main-section-expanded .main-section-expanded .expander-lvl-2 {
+  transform: rotate(270deg);
+}
+.main-content-container article {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 3rem;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem;
+}
+
+
+
+.main-content-container p {
+  padding-left: 2rem;
+}
+.main-content-container ul,
+.main-content-container ol {
+  padding-left: 4rem;
+}
+
+
+
+
+
+
+
+.main-content-container .list-my-choices {
+  margin-top: 0.5rem;
+  background-color: #d8d8d8;
+  padding: 0.1rem;
+  padding-left: 0.5rem;
+  border-radius: 0.7rem;
+  position: relative;
+  cursor: pointer;
+  max-height: 999999px;
+}
+.list-my-choices.selected-exercise {
+  color: #ffd96d;
+  background-color: #4B5320;
+}
+.ex-variations-cta {
+  /* display: inline-block; */
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  margin: 0.5rem 0;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.7rem;
+}
+.list-variation {
+  margin-left: 2.1rem;
+  padding-left: 0.6rem;
+  border-radius: 0.6rem;
+  color: white;
+  max-height: 0;
+  overflow: hidden;
+}
+.expand-exercise-details {
+  padding: 0 0.1rem 0 0;
+  user-select: none;
+  pointer-events: none;
+}
+.dumbbells .list-dumbbells,
+.barbells .list-barbells,
+.bodyweight .list-bodyweight,
+.machines .list-machines {
+  max-height: none!important;
+}
+/* .dumbbells .list-dumbbells {
+  background-color: rgba(71, 71, 199, 0.4);
+}
+.barbells .list-barbells {
+  background-color: rgba(199, 165, 71, 0.4);
+}
+.bodyweight .list-bodyweight {
+  background-color: rgba(69, 173, 75, 0.4);
+} */
+.dumbbells .dumbbells,
+.dumbbells .list-dumbbells {
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(71, 71, 199) 100%);
+}
+.machines .machines,
+.machines .list-machines {
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(128, 22, 22) 100%);
+}
+.barbells .barbells,
+.barbells .list-barbells {
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(199, 165, 71) 100%);
+}
+.bodyweight .bodyweight,
+.bodyweight .list-bodyweight {
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(69, 173, 75) 100%);
+}
+.bodyweight_cloth {
+  cursor: default;
+  user-select: none;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, #d8d8d8 100%);
+}
+.details-overlay {
+  position: fixed;
+  top: 0vh;
+  right: 0;
+  /* height: 80vh; */
+  width: 40vw;
+  background-color: #758041;
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+  padding: 0;
+}
+.main-content-container .exercise-details-text-container {
+  padding: 0.5rem 0.5rem 2.5rem 0.5rem;
+  
+}
+.details-overlay.closed {
+  display: none;
+}
+.main-content-container .exercise-details-text-container h2 {
+  margin-bottom: 1.5rem;
+}
+.exercise-details-text-container #name {
+  min-height: 4rem;
+}
+.main-content-container .exercise-details-text-container p {
+  padding: 0.3rem 0.5rem;
+}
+.exercise-details-text-container {
+  border: 0.1rem solid black;
+  /* padding: 1rem 0 0 1rem; */
+}
+#close-details {
+  position: fixed;
+  top: -0.5rem;
+  right: -0.2rem;
+  font-size: 2.5rem;
+  user-select: none;
+  cursor: pointer;
+  padding: 1.25rem;
+}
+.empty {
+  display: none!important;
+}
+
+
+
+
+
+.redirect-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 0 2rem;
+  min-height: 5rem;
+}
+.redirect-icon-svg {
+  cursor: pointer;
+  height: 3.7rem;
+  width: 3.7rem;
+  padding: 0;
+  box-sizing: content-box;
+  border: 0.3rem solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+
+svg path {
+  pointer-events: none;
+}
+
+#github {
+  fill: #542f8a;
+}
+#youtube {
+  fill: #c10000;
+}
+
+#instagram {
+  fill: rgb(0, 79, 164);
+}
+
+#AEQ {
+  fill: rgb(0, 0, 0);
+  margin-left: 1.5rem;
+}
+
+@media screen and (min-width: 64em) {
+  svg#github:hover {
+    background-color: #542f8a;
+    border-color: #542f8a;
+  }
+  svg#instagram:hover {
+    background: rgb(0, 100, 168);
+    border-color: rgb(0, 100, 168);
+  }
+  svg#youtube:hover {
+    background-color: #c10000;
+    border-color: #c10000;
+  }
+  svg#github:hover,
+  svg#instagram:hover,
+  svg#youtube:hover {
+    transition: fill 0.1s, background-color 0.8s, border-color 0.4s;
+    fill: #ffffff;
+  }
+  #instagram:hover #instagram {
+    transition: fill 0.1s, background-color 0.8s, border-color 0.8s;
+    fill: rgb(255, 255, 255);
+    background-color: rgb(0, 79, 164);
+    border-color: rgb(0, 79, 164);
+  }
+  svg#AEQ:hover {
+    transition: border-color 0.3s;
+    border: 0.3rem solid #000000;
+  }
+}
+.standing {
+  width: 16rem;
+  height: 30rem;
+  background-image: url('img/standing3.jpeg');
+  background-position: -5.8rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 1rem auto 4rem auto;
+  border-radius: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+.redirect-A {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.redirect-A svg {
+  margin: 0 1.4rem;
+}
+
+.redirect-B svg {
+  height: 3.7rem;
+  width: 3.7rem;
+}
+
+.page-title {
+  color: white;
+  font-size: 3rem;
+  user-select: none;
+  font-family: 'Black Ops One', cursive;
+  /* background-color: black; */
+  display: flex;
+  align-items: center;
+}
+
+.page-title-c {
+  justify-content: center;
+  background-color: #000000d9;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+.page-title-c_1 {
+  margin-top: 3rem;
+}
+
+.page-title-c_2 {
+  min-height: 0;
+  padding: 0.9rem 0;
+}
+
+/* .page-title-c_2 .page-title {
+  font-size: 2rem;
+} */
+
+.page-title-c_3 {
+  min-height: 0;
+  padding: 0.9rem 0;
+}
+
+@media screen and (max-width: 63.9em) and (orientation: portrait) {
+  .page-title-c_1 {
+    margin-top: 6rem;
+  }
+  .main-content-container p {
+    padding-left: 1rem;
+  }
+  .main-content-container h1 {
+    font-size: 1.9rem;
+  }
+  .expander-p-title {
+    font-size: 1.9rem;
+  }
+  .main-content-container h2 {
+    font-size: 2.7rem;
+  }
+  .main-content-container article {
+    font-size: 1.9rem;
+  }
+  
+  .main-content-container ul,
+  .main-content-container ol {
+    padding-left: 6rem;
+  }
+  .category-A .main-content-container,
+  .category-A .expander-p-container {
+    background-color: rgb(50, 53, 209);
+  }
+  .category-B .main-content-container,
+  .category-B .expander-p-container {
+    background-color: rgb(21, 147, 231);
+  }
+  .category-C .main-content-container,
+  .category-C .expander-p-container {
+    background-color: rgb(255, 159, 40);
+  }
+  .redirect-icon-svg {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 2rem;
+    border: 0.6rem solid #ffffff;
+  }
+  .redirect-B .redirect-icon-svg {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 1.3rem;
+  }
+  .page-title-c_2 {
+    padding: 1.5rem 0;
+  }
+  body {
+    background: url('img/bk-low.jpg');
+    background-size: contain;
+  }
+  /* .main-section-expanded-p .expander-p-arrow,
+  .main-section-expanded-p .expander-p-title {
+    color: rgb(255, 159, 40);
+  } */
+  .category-A .main-section-expanded-p .expander-p-arrow,
+  .category-A .expander-p-title {
+    background-color: rgb(50, 53, 209);
+  }
+  .category-B .main-section-expanded-p .expander-p-arrow,
+  .category-B .expander-p-title {
+    background-color: rgb(21, 147, 231);
+  }
+  .category-C .main-section-expanded-p .expander-p-arrow,
+  .category-C .expander-p-title {
+    background-color: rgb(255, 159, 40);
+  }
+  
+  .main-section-expanded-p .expander-p-container {
+    border: 0.3rem solid rgb(255, 159, 40);
+  }
+  .main-content-container .exercise-details-text-container {
+    padding: 0.5rem 0.5rem 6rem 0.5rem;
+  }
+  #close-details {
+    position: absolute;
+    top: auto;
+    right: 1%;
+    bottom: 0;
+    font-size: 3.5rem;
+  }
+}
