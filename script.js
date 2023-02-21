@@ -61,6 +61,7 @@ $('.expander').click(function() {
         $(this).parent().parent().addClass('main-section-expanded');
     } else {
         $(this).parent().parent().removeClass('main-section-expanded');
+        $(this).parent().parent().children('.main-content-container').removeClass('main-section-expanded');
     }
 });
 

@@ -67,6 +67,8 @@ body {
   color: rgb(231, 231, 231);
   border-bottom-right-radius: 2rem;
   z-index: 9999;
+  cursor: pointer;
+  user-select: none;
 }
 
 .close-all span {
@@ -295,7 +297,7 @@ body {
 }
 
 .category-A .expander-p-container {
-  background-color: rgb(68, 70, 211);
+  background-color: rgb(128 130 235);
 }
 
 .category-B .expander-p-container {
@@ -333,7 +335,7 @@ body {
 }
 
 .category-A.main-section-expanded-p .expander-p-arrow {
-  /* color: rgb(50, 53, 209); */
+  /* color: rgb(128 130 235); */
   color: rgb(255, 255, 255);
 }
 .category-B.main-section-expanded-p .expander-p-arrow {
@@ -353,7 +355,7 @@ body {
 } 
 
 .category-A.main-section-expanded-p .expander-p-title {
-  /* color: rgb(50, 53, 209); */
+  /* color: rgb(128 130 235); */
   color: rgb(0, 0, 0);
 }
 .category-B.main-section-expanded-p .expander-p-title {
@@ -371,7 +373,7 @@ body {
 }
 
 .category-A.main-section-expanded-p .expander-p-container {
-  border-color: rgb(50, 53, 209);
+  border-color: rgb(128 130 235);
 }
 .category-B.main-section-expanded-p .expander-p-container {
   border-color: rgb(21, 147, 231);
@@ -399,7 +401,7 @@ body {
 }
 
 .category-A .main-content-container {
-  background-color: rgb(50, 53, 209);
+  background-color: rgb(128 130 235);
 }
 .category-B .main-content-container {
   background-color: rgb(21, 147, 231);
@@ -759,7 +761,7 @@ svg path {
   }
   .category-A .main-content-container,
   .category-A .expander-p-container {
-    background-color: rgb(50, 53, 209);
+    background-color: rgb(128 130 235);
   }
   .category-B .main-content-container,
   .category-B .expander-p-container {
@@ -793,7 +795,7 @@ svg path {
   } */
   .category-A .main-section-expanded-p .expander-p-arrow,
   .category-A .expander-p-title {
-    background-color: rgb(50, 53, 209);
+    background-color: rgb(128 130 235);
   }
   .category-B .main-section-expanded-p .expander-p-arrow,
   .category-B .expander-p-title {
