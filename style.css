@@ -56,10 +56,10 @@ body {
 
 .close-all {
   position: fixed;
-  top: 0;
+  top: 10rem;
   left: 0;
-  height: 6rem;
-  width: 6rem;
+  height: 9rem;
+  width: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,6 +73,29 @@ body {
 
 .close-all span {
   transform: rotate(270deg);
+  font-size: 2.2rem;
+}
+
+.expand-all {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  height: 9rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.404);
+  color: rgb(231, 231, 231);
+  border-top-right-radius: 2rem;
+  z-index: 9999;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 3px solid black;
+}
+
+.expand-all span {
+  transform: rotate(90deg);
   font-size: 2.2rem;
 }
 
