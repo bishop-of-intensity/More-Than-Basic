@@ -28,9 +28,13 @@ html h2 {
 body {
   height: auto;
   padding: 0 1rem 0 1rem;
-  background: url('img/bk-high.jpg');
-  background-size: contain;
   min-height: 140vh;
+  background: url('img/_bk_V3.jpg');
+  background-size: contain;
+  /* background: url('img/bk-high.jpg');
+  background-size: contain; */
+  /* background: url('img/bk-high.jpg');
+  background-size: contain; */
 }
 body {
   display: flex;
@@ -52,7 +56,7 @@ body {
   top: 19rem;
   left: 0;
   height: 9rem;
-  width: 5rem;
+  width: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +78,7 @@ body {
   top: 1rem;
   left: 0;
   height: 9rem;
-  width: 5rem;
+  width: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,7 +101,7 @@ body {
   top: 10rem;
   left: 0;
   height: 9rem;
-  width: 5rem;
+  width: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -477,8 +481,9 @@ body {
 .expander-lvl-2 {
   position: absolute;
   font-size: 3.5rem;
-  top: 1rem;
-  right: 3rem;
+  top: 0rem;
+  right: 2rem;
+  padding: 1rem;
   transform: rotate(90deg);
   cursor: pointer;
   user-select: none;
@@ -803,8 +808,8 @@ svg path {
     padding: 1.5rem 0;
   }
   body {
-    background: url('img/bk-low.jpg');
-    background-size: contain;
+    /* background: url('img/bk-low.jpg');
+    background-size: contain; */
   }
   .category-NAV .main-section-expanded-p .expander-p-arrow,
   .category-NAV .expander-p-title {
