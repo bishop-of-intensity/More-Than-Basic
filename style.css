@@ -12,8 +12,8 @@ div, section ,p ,h1 ,h2, h3, span {
 html {
   font-size: 1rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  min-height: 120vh;
-  overflow-y: scroll;
+  min-height: 100vh;
+  overflow: hidden;
   animation-fill-mode: forwards;
     background-position-y: -0.5rem;
     background-color: rgb(0, 0, 0);
@@ -26,15 +26,18 @@ html h2 {
 }
 
 body {
-  height: auto;
+  height: 100vh;
+  overflow-y: scroll;
   padding: 0 1rem 0 1rem;
-  min-height: 140vh;
-  background: url('img/bk_v3.jpg');
-  background-size: contain;
+  /* /* min-height: 140vh; */
+  background-image: url('img/casey-horner_bk_1_desktop.jpg');
+  background-size: cover;
   /* background: url('img/bk-high.jpg');
   background-size: contain; */
   /* background: url('img/bk-high.jpg');
   background-size: contain; */
+    background-size: cover;
+    background-position: right;
 }
 body {
   display: flex;
@@ -808,6 +811,10 @@ svg path {
     padding: 1.5rem 0;
   }
   body {
+    
+    background-image: url('img/casey-horner_bk_1.jpg');
+    background-size: cover;
+    background-position: bottom;
     /* background: url('img/bk-low.jpg');
     background-size: contain; */
   }
