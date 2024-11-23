@@ -921,3 +921,7 @@ svg path {
   position: relative;
   top: 0;
 }
+
+.margin-large {
+  margin-bottom: 10rem;
+}
