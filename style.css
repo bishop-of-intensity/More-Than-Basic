@@ -925,3 +925,11 @@ svg path {
 .margin-large {
   margin-bottom: 10rem;
 }
+
+.display-none-url {
+  display: none;
+}
+
+.display-flex-url {
+  display: flex!important;
+}

@@ -1,3 +1,12 @@
+$(document).ready(function() {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get('iq') === 'true') {
+        // Reveal or expand a specific section
+        $('.main-content-container.main-section-collapsed.display-none-url').addClass('display-flex-url');
+    }
+});
+
 // SECTION-EXPANDER
 $('.parent .expander-p-container').click(function() {
     if(!$(this).parent().hasClass('main-section-expanded-p')) {
