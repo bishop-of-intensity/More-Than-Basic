@@ -926,10 +926,14 @@ svg path {
   margin-bottom: 10rem;
 }
 
-.display-none-url {
+.display-none-url, .display-none-url_2, .display-none-url_3 {
   display: none;
 }
 
 .display-flex-url {
   display: flex!important;
+}
+
+.display-block-url {
+  display: block!important;
 }

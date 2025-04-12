@@ -5,6 +5,14 @@ $(document).ready(function() {
         // Reveal or expand a specific section
         $('.main-content-container.main-section-collapsed.display-none-url').addClass('display-flex-url');
     }
+    if (params.get('career') === 'true') {
+        // Reveal or expand a specific section
+        $('.parent.category-A.display-none-url_2').addClass('display-block-url');
+    }
+    if (params.get('family') === 'true') {
+        // Reveal or expand a specific section
+        $('.parent.category-NAV.display-none-url_3').addClass('display-block-url');
+    }
 });
 
 // SECTION-EXPANDER
